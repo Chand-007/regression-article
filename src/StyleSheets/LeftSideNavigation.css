@@ -1,0 +1,55 @@
+.l-s-container{
+    width:100%;
+    height:100%;
+    padding:10px;
+}
+
+.l-s-container h3{
+    text-align: left;
+    margin-top:55px;
+    margin-left:20px;
+    padding:5px;
+    font-weight:400;
+    font-size: 1.3rem;
+}
+
+.l-s-container input{
+    margin-left:40px;
+    margin-top:30px;
+    width:200px;
+    padding:10px;
+    border:none;
+    border-bottom:1px solid rgb(183, 182, 182);
+}
+
+.l-s-container input:focus{
+    outline:none;
+}
+
+.l-s-container p{
+    margin-left:20px;
+    margin-top:50px;
+    text-align: left;
+}
+
+.break{
+    text-wrap: wrap;
+}
+
+.content-list{
+    margin-top: 10px;
+    margin-left:40px;
+}
+
+.content-list li{
+    margin-bottom:10px;
+}
+
+.highlight:hover,.content-list li:hover{
+    color:blue;
+    cursor: pointer;
+}
+
+.content-list li:nth-child(8){
+    color:blue;
+}

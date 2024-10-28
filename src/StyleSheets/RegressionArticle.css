@@ -1,0 +1,26 @@
+.page-container{
+    display:flex;
+}
+
+.left-container{
+    width:20%;
+    height:100%;
+    padding:10px;
+}
+
+.middle-container{
+    width:60%;
+    height: 100%;
+    padding:10px;
+    border-left:1px solid grey;
+}
+
+.right-container{
+    width:20%;
+    height:100%;
+    padding:10px;
+    border-left:1px solid grey;
+    position: sticky;
+    top:0px;
+    left:0px;
+}

@@ -1,0 +1,28 @@
+.r-s-container{
+    width:100%;
+    height:100%;
+    padding:10px;
+}
+
+.r-s-container h3{
+    margin-left: 10px;
+    margin-bottom:20px ;
+}
+
+ol{
+    margin-left:20px;
+}
+
+.contents-container li{
+    margin-bottom: 10px;
+}
+
+.contents-container li a{
+    text-decoration: none;
+    color:black;
+}
+
+
+.contents-container li a:hover{
+    color:blue;
+}

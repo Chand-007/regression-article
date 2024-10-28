@@ -1,0 +1,246 @@
+.main-middle-container{
+    width:100%;
+    height:100%;
+    padding:10px;
+}
+
+.main-middle-container h1{
+    margin-top:15px;
+    font-weight: normal;
+}
+
+.main-middle-container h2{
+    margin-top:30px;
+    font-weight:normal;
+}
+
+.code-box-1{
+    margin-top:10px;
+    width:100%;
+    height:150px;
+    padding:10px;
+    border-left:1.8px solid green;
+    background-color: aliceblue;
+}
+
+table{
+    width:80%;
+    border-collapse: collapse;
+    margin-top:20px;
+}
+
+th{
+    font-weight:500;
+}
+th,td{
+    text-align: left;
+    padding:10px;
+}
+
+tr:nth-child(even){
+    background-color: rgb(229, 222, 222);
+}
+
+p{
+    margin-top:15px;
+}
+
+h3{
+    margin-top:15px;
+}
+
+math{
+    background-color: rgb(205, 198, 198);
+}
+
+ol{
+    margin-top:15px;
+}
+
+ol li{
+    margin-left:20px;
+}
+
+.code-box-2{
+    margin-top:10px;
+    width:100%;
+    height:90px;
+    padding:10px;
+    border-left:1.8px solid green;
+    background-color: aliceblue;
+}
+
+
+.results-table-container{
+    margin-left:30px;
+    background-color: rgba(232, 226, 226, 0.407);
+    width:90%;
+    height:130px;
+    margin-bottom:10px;
+}
+
+.results-first-row,.results-second-row{
+    padding:0px;
+}
+
+.result-row:nth-child(even){
+    background-color: rgba(232, 226, 226, 0.407);
+}
+
+.code-box-3{
+    margin-top:10px;
+    width:100%;
+    height:50px;
+    padding:10px;
+    border-left:1.8px solid green;
+    background-color: aliceblue;
+}
+
+.flyash-table{
+    width:40%;
+    border-collapse: collapse;
+    margin-top:20px;
+}
+
+th{
+    font-weight:500;
+}
+th,td{
+    text-align: left;
+    padding:8px;
+}
+
+tr:nth-child(even){
+    background-color: rgb(229, 222, 222);
+}
+
+.code-box-4{
+    margin-top:10px;
+    width:100%;
+    height:70px;
+    padding:10px;
+    border-left:1.8px solid green;
+    background-color: aliceblue;
+}
+
+.model-analysis-table-container{
+    width:80%;
+    height:350px;
+    display:flex;
+    column-gap: 20px;
+}
+.model-analysis-table{
+    width:100%;
+}
+
+.diagnostics-container{
+    width:90%;
+    display:flex;
+    column-gap: 20px;
+}
+
+.hint-container{
+    padding:5px;
+    background-color: aqua;
+}
+
+.hint-container span{
+    font-weight: bold;
+}
+
+.code-box-5{
+    margin-top:10px;
+    width:100%;
+    height:50px;
+    padding:10px;
+    border-left:1.8px solid green;
+    background-color: aliceblue;
+}
+
+.hist-residual-pic{
+    margin-top:30px;
+}
+
+.code-box-6{
+    margin-top:10px;
+    width:100%;
+    height:60px;
+    padding:10px;
+    border-left:1.8px solid green;
+    background-color: aliceblue;
+}
+
+.results-container-1{
+    margin-top:12px;
+    background-color: rgb(230, 223, 223);
+    margin-left:25px;
+    display:block;
+    padding:5px;
+}
+
+.code-box-7{
+    margin-top:10px;
+    width:100%;
+    height:190px;
+    padding:10px;
+    border-left:1.8px solid green;
+    background-color: aliceblue;
+}
+
+.code-box-8{
+    margin-top:10px;
+    width:100%;
+    height:40px;
+    padding:10px;
+    border-left:1.8px solid green;
+    background-color: aliceblue;
+}
+
+.fitPlotContainer{
+    width: 100%;
+    height:350px;
+    background-color: rgb(241, 241, 241);
+}
+.fit-plot-row:nth-child(even){
+    background-color: rgb(241, 241, 241);
+}
+.code-box-9{
+    margin-top:10px;
+    width:100%;
+    height:180px;
+    padding:10px;
+    border-left:1.8px solid green;
+    background-color: aliceblue;
+}
+
+.hist-residual-pic-1{
+    margin-top:30px;
+    margin-bottom: 50px;
+}
+
+.navigation-button-container{
+    width:100%;
+    padding:5px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    column-gap: 100px;
+}
+
+.nav-button{
+    width:300px;
+    height:40px;
+    border:0.5px solid black;
+    padding:2px;
+}
+
+.nav-button .nav-para{
+    margin:0;
+}
+
+.bottom-border{
+    margin-top:20px;
+    width:100%;
+    border-bottom: 2px solid darkgray;
+}

@@ -2,6 +2,7 @@ import LeftSideNavigation from "./ArticlePages/LeftSideNavigation"
 import RegressionBlogArticle from "./ArticlePages/RegressionBlogArticle"
 import RightSideNavigation from "./ArticlePages/RightSideNavigation"
 
+import './StyleSheets/RegressionArticle.css'
 
 
 export default function RegressionArticle(){
