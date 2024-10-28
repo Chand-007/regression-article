@@ -15,7 +15,7 @@ export default function RegressionBlogArticle(){
         <div className="main-middle-container">
             <div className="controls-container"></div>
             <h1>8. Simple Linear Regression</h1>
-            <h2 id='headlink1'>8.1. Preliminaries</h2>
+            <h2 id='headLink1'>8.1. Preliminaries</h2>
             <div className="code-box-1">
                 <pre>
                  <code>
@@ -62,7 +62,7 @@ export default function RegressionBlogArticle(){
                         })}
                     </tbody> 
                 </table>
-                <h2 id='headlink2'>8.2 Linear Regression with a single explanatory variable</h2>
+                <h2 id='headLink2'>8.2 Linear Regression with a single explanatory variable</h2>
                 <p>There are many ways to do linear regression in Python. We have already used the heavyweight Statsmodels library, so we will continue to use it here. It has much more functionality than we need, but it provides nicely-formatted output similar to SAS Enterprise Guide.</p>
                 <p>The method we will use to create linear regression models in the Statsmodels library is OLS(). OLS stands for “ordinary least squares”, which means the algorithm finds the best fit line my minimizing the squared residuals (this is “least squares”). The “ordinary” part of the name gives us the sense that the type of linear regression we are seeing here is just the tip of the methodological iceberg. There is a whole world of non-ordinary regression techniques out there intended to address this or that methodological problem or circumstance. But since this is a basic course, we will stick with ordinary least squares.</p>
                 <h3 id='headsublink1'>8.2.1 Preparing the data</h3>
