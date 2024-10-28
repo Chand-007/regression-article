@@ -65,7 +65,7 @@ export default function RegressionBlogArticle(){
                 <h2 id='headlink2'>8.2 Linear Regression with a single explanatory variable</h2>
                 <p>There are many ways to do linear regression in Python. We have already used the heavyweight Statsmodels library, so we will continue to use it here. It has much more functionality than we need, but it provides nicely-formatted output similar to SAS Enterprise Guide.</p>
                 <p>The method we will use to create linear regression models in the Statsmodels library is OLS(). OLS stands for “ordinary least squares”, which means the algorithm finds the best fit line my minimizing the squared residuals (this is “least squares”). The “ordinary” part of the name gives us the sense that the type of linear regression we are seeing here is just the tip of the methodological iceberg. There is a whole world of non-ordinary regression techniques out there intended to address this or that methodological problem or circumstance. But since this is a basic course, we will stick with ordinary least squares.</p>
-                <h3>8.2.1 Preparing the data</h3>
+                <h3 id='headsublink1'>8.2.1 Preparing the data</h3>
                 <p>Recall the general format of the linear regression equation:{' '}
   <math xmlns="http://www.w3.org/1998/Math/MathML" className="math-equation">
   <mi>Y</mi>
@@ -142,7 +142,7 @@ export default function RegressionBlogArticle(){
             <p>We see above that X is a single column of numbers (amount of fly ash in each batch of concrete). The numbers on the left are just the Python index (very row in a Python array has a row number, or index).
 
 </p>
-<h3>8.2.2 Adding a column for the constant</h3>
+<h3 id="headsublink2">8.2.2 Adding a column for the constant</h3>
 <p>We can add another column for the regression constant using Statsmodels add_constant() method:</p>
 <div className="code-box-3">
                 <pre>
@@ -197,7 +197,7 @@ export default function RegressionBlogArticle(){
 </math> x 105.0</p>
 
 <p>The “const” column simply provides a placeholder—a bunch of 1s to multiply the constant by. So now we understand why we have to run add_constant().</p>
-<h3>8.2.3 Running the model</h3>
+<h3 id='headsublink3'>8.2.3 Running the model</h3>
 <div className="code-box-4">
                 <pre>
                  <code>
