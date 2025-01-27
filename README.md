@@ -53,4 +53,6 @@ To run this project locally, follow these steps:
 
 Here are some screenshots of the application:
 
+![Regression-article](images/regression-article.PNG)
 
+![Regression-article-scroll](images/regression-article-scroll.PNG)
