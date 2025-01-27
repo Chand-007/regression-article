@@ -1,5 +1,4 @@
 import '../StyleSheets/LeftSideNavigation.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export default function LeftSideNavigation(){
     return(
         <div className='l-s-container'>

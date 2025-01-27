@@ -92,6 +92,3 @@ export const fitPlotValues_1 = [
     { index: 102, value: 36.103511 }
 ]
 
-export const fitPlotValues_2=[
-
-];

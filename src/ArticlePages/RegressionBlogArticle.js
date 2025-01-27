@@ -8,7 +8,6 @@ import { regressionResults } from '../ArrayTables/FirstArray'
 import { diagnostics_1 } from '../ArrayTables/FirstArray'
 import { diagnostics_2 } from '../ArrayTables/FirstArray'
 import { fitPlotValues_1 } from '../ArrayTables/FirstArray'
-import { fitPlotValues_2 } from '../ArrayTables/FirstArray'
 
 export default function RegressionBlogArticle(){
     return(
@@ -22,7 +21,7 @@ export default function RegressionBlogArticle(){
                     {`import pandas as pd`}{'\n'}{'\n'}
                     {`con = pd.read_csv('Data/ConcreteStrength.csv')`}{'\n'}
                     {`con.rename(columns={'Fly ash': 'FlyAsh', 'Coarse Aggr.': "CoarseAgg",'Fine Aggr.': 'FineAgg',`}{'\n'}
-                    {'        '}{`'Air Entrainment': 'AirEntrain','Compressive Strength (28-day)(Mpa)': 'Strength'}, inplace=True)`}{'\n'}
+                    {`'Air Entrainment': 'AirEntrain','Compressive Strength (28-day)(Mpa)': 'Strength'}, inplace=True)`}{'\n'}
                     {`con['AirEntrain'] = con['AirEntrain'].astype('category')`}{'\n'}
                     {`con.head()`}
                     </code>
@@ -46,7 +45,7 @@ export default function RegressionBlogArticle(){
                     <tbody>
                         {concreteData.map((data)=>{
                             return(
-                                <tr className='table-body-content'>
+                                <tr className='table-body-content' key={data.Id}>
                                     <td>{data.Id}</td>
                                     <td>{data.No}</td>
                                     <td>{data.Cement}</td>
@@ -129,7 +128,7 @@ export default function RegressionBlogArticle(){
               <tbody className='result-body'>
                 {data.map((dataset)=>{
                   return(
-                    <tr className="result-row">
+                    <tr className="result-row" key={dataset.index}>
                       <td className="results-first-row">{dataset.index}</td>
                       <td className="results-second-row">{dataset.value}</td>
                     </tr>
@@ -163,7 +162,7 @@ export default function RegressionBlogArticle(){
                     <tbody>
                         {Flyash.map((data)=>{
                             return(
-                                <tr className='flyash-body-content'>
+                                <tr className='flyash-body-content' key={data.index}>
                                     <td>{data.index}</td>
                                     <td>{data.group}</td>
                                     <td>{data.value}</td>
@@ -212,7 +211,7 @@ export default function RegressionBlogArticle(){
               <tbody className="model-analysis-body">
                 {modelSummaryone.map((modeldetails)=>{
                   return(
-                    <tr className='model-analysis-row'>
+                    <tr className='model-analysis-row' key={modeldetails.value}>
                       <td>{modeldetails.key}: </td>
                       <td>{modeldetails.value}</td>
                     </tr>
@@ -224,7 +223,7 @@ export default function RegressionBlogArticle(){
               <tbody className="model-analysis-body">
                 {modelSummarytwo.map((modeldetails)=>{
                   return(
-                    <tr className='model-analysis-row'>
+                    <tr className='model-analysis-row' key={modeldetails.value}>
                       <td>{modeldetails.key}: </td>
                       <td>{modeldetails.value}</td>
                     </tr>
@@ -250,7 +249,7 @@ export default function RegressionBlogArticle(){
   <tbody className="regression-analysis-body">
     {regressionResults.map((regressionDetails)=>{
       return(
-        <tr className='regression-analysis-row'>
+        <tr className='regression-analysis-row' key={regressionDetails.t}>
           <td>{regressionDetails.variable}</td>
           <td>{regressionDetails.coef}</td>
           <td>{regressionDetails.stdErr}</td>
@@ -268,7 +267,7 @@ export default function RegressionBlogArticle(){
     <tbody className="diagnostics-sub-body-1">
       {diagnostics_1.map((diagnosticsdetails)=>{
         return(
-          <tr className='diagnostics-sub-row-1'>
+          <tr className='diagnostics-sub-row-1' key={diagnosticsdetails.value}>
             <td>{diagnosticsdetails.key}</td>
             <td>{diagnosticsdetails.value}</td>
           </tr>
@@ -280,7 +279,7 @@ export default function RegressionBlogArticle(){
   <tbody className="diagnostics-sub-body-2">
       {diagnostics_2.map((diagnosticsdetails)=>{
         return(
-          <tr className='diagnostics-sub-row-2'>
+          <tr className='diagnostics-sub-row-2' key={diagnosticsdetails.value}>
             <td>{diagnosticsdetails.key}</td>
             <td>{diagnosticsdetails.value}</td>
           </tr>
@@ -396,7 +395,7 @@ export default function RegressionBlogArticle(){
                 <tbody>
                   {fitPlotValues_1.map((plotValues)=>{
                     return(
-                      <tr className='fit-plot-row'>
+                      <tr className='fit-plot-row' key={plotValues.index}>
                       <td>{plotValues.index}</td>
                       <td>{plotValues.value}</td>
                     </tr>
