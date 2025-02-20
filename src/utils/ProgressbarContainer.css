@@ -1,0 +1,19 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.progress-bar-container{
+    height:15px;
+    width:100vw;
+    background-color: grey;
+    position: fixed;
+    top:0px;
+    left:0px;
+}
+
+.progress-bar{
+    height:15px;
+    background-color: blue;
+}

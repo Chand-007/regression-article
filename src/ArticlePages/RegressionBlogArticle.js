@@ -10,6 +10,7 @@ import { diagnostics_2 } from '../ArrayTables/FirstArray'
 import { fitPlotValues_1 } from '../ArrayTables/FirstArray'
 
 export default function RegressionBlogArticle(){
+
     return(
         <div className="main-middle-container">
             <div className="controls-container"></div>
