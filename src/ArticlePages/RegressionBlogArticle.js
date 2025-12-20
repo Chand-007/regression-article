@@ -8,14 +8,46 @@ import { regressionResults } from '../ArrayTables/FirstArray'
 import { diagnostics_1 } from '../ArrayTables/FirstArray'
 import { diagnostics_2 } from '../ArrayTables/FirstArray'
 import { fitPlotValues_1 } from '../ArrayTables/FirstArray'
+import { useEffect,useRef } from 'react'
 
-export default function RegressionBlogArticle(){
-
+export default function RegressionBlogArticle({setClassVariable}){
+  const headingSRef = useRef(null)
+  const headingERef = useRef(null)
+  const headingORef = useRef(null)
+  const headingTRef = useRef(null)
+  const headingTHRef = useRef(null)
+  const headingFORef = useRef(null)
+  const headingFRef = useRef(null)
+  const headingSIRef = useRef(null)
+  const headingTORef = useRef(null)
+  const headingTTRef = useRef(null)
+  const headingTTHRef = useRef(null)
+  useEffect(()=>{
+    function callback(entries){
+      entries.forEach((entry)=>{
+        if (entry.isIntersecting){
+          setClassVariable(entry.target.id)
+        }
+      })
+    }
+    const observer = new IntersectionObserver(callback)
+    observer.observe(headingORef.current)
+    observer.observe(headingTRef.current)
+    observer.observe(headingTORef.current)
+    observer.observe(headingTTRef.current)
+    observer.observe(headingTTHRef.current)
+    observer.observe(headingTHRef.current)
+    observer.observe(headingFORef.current)
+    observer.observe(headingFRef.current)
+    observer.observe(headingSIRef.current)
+    observer.observe(headingSRef.current)
+    observer.observe(headingERef.current)
+  },[])
     return(
         <div className="main-middle-container">
             <div className="controls-container"></div>
             <h1>8. Simple Linear Regression</h1>
-            <h2 id='headLink1'>8.1. Preliminaries</h2>
+            <h2 id='headLink1' ref={headingORef}>8.1. Preliminaries</h2>
             <div className="code-box-1">
                 <pre>
                  <code>
@@ -62,10 +94,10 @@ export default function RegressionBlogArticle(){
                         })}
                     </tbody> 
                 </table>
-                <h2 id='headLink2'>8.2 Linear Regression with a single explanatory variable</h2>
+                <h2 id='headLink2' ref={headingTRef}>8.2 Linear Regression with a single explanatory variable</h2>
                 <p>There are many ways to do linear regression in Python. We have already used the heavyweight Statsmodels library, so we will continue to use it here. It has much more functionality than we need, but it provides nicely-formatted output similar to SAS Enterprise Guide.</p>
                 <p>The method we will use to create linear regression models in the Statsmodels library is OLS(). OLS stands for “ordinary least squares”, which means the algorithm finds the best fit line my minimizing the squared residuals (this is “least squares”). The “ordinary” part of the name gives us the sense that the type of linear regression we are seeing here is just the tip of the methodological iceberg. There is a whole world of non-ordinary regression techniques out there intended to address this or that methodological problem or circumstance. But since this is a basic course, we will stick with ordinary least squares.</p>
-                <h3 id='headsublink1'>8.2.1 Preparing the data</h3>
+                <h3 id='headsublink1' ref={headingTORef}>8.2.1 Preparing the data</h3>
                 <p>Recall the general format of the linear regression equation:{' '}
   <math xmlns="http://www.w3.org/1998/Math/MathML" className="math-equation">
   <mi>Y</mi>
@@ -142,7 +174,7 @@ export default function RegressionBlogArticle(){
             <p>We see above that X is a single column of numbers (amount of fly ash in each batch of concrete). The numbers on the left are just the Python index (very row in a Python array has a row number, or index).
 
 </p>
-<h3 id="headsublink2">8.2.2 Adding a column for the constant</h3>
+<h3 id="headsublink2" ref={headingTTRef}>8.2.2 Adding a column for the constant</h3>
 <p>We can add another column for the regression constant using Statsmodels add_constant() method:</p>
 <div className="code-box-3">
                 <pre>
@@ -197,7 +229,7 @@ export default function RegressionBlogArticle(){
 </math> x 105.0</p>
 
 <p>The “const” column simply provides a placeholder—a bunch of 1s to multiply the constant by. So now we understand why we have to run add_constant().</p>
-<h3 id='headsublink3'>8.2.3 Running the model</h3>
+<h3 id='headsublink3' ref={headingTTHRef}>8.2.3 Running the model</h3>
 <div className="code-box-4">
                 <pre>
                  <code>
@@ -295,10 +327,10 @@ export default function RegressionBlogArticle(){
 <p className='hint-container'>
 <span>Hint: </span>There is no missing data in the bank data set, so the missing='drop' argument above is not required. However, missing data is a fact of life in most data sets. The simplest way to handle it in linear regression is simply to censor (drop) all rows with missing data from the linear regression procedure. This is what I have done above.
 </p>
-<h2 id='headLink3'>8.3. Regression Diagnostics</h2>
+<h2 id='headLink3' ref={headingTHRef}>8.3. Regression Diagnostics</h2>
 <p>Like R, Statsmodels exposes the residuals. That is, keeps an array containing the difference between the observed values Y and the values predicted by the linear model. A fundamental assumption is that the residuals (or “errors”) are random: some big, some some small, some positive, some negative, but overall, the errors are normally distributed around a mean of zero. Anything other than normally distributed residuals indicates a serious problem with the linear model.
 </p>
-<h2 id='headLink4'>8.4. Histogram of residuals</h2>
+<h2 id='headLink4'ref={headingFORef}>8.4. Histogram of residuals</h2>
 <p>Plotting residuals in Seaborn is straightforward: we simply pass the histplot() function the array of residuals from the regression model.</p>
 <div className="code-box-5">
                 <pre>
@@ -343,7 +375,7 @@ export default function RegressionBlogArticle(){
                 </pre>
             </div> 
             <img className="hist-residual-pic" src="https://www.sfu.ca/~mjbrydon/tutorials/BAinPy/_images/09_regression_16_0.png"/>
-            <h2 id='headLink5'>8.5. Boxplot of residuals</h2>
+            <h2 id='headLink5'ref={headingFRef}>8.5. Boxplot of residuals</h2>
             <p>A boxplot is often better when the residuals are highly non-normal. Here we see a reasonable distribution with the mean close to the median (indicating symmetry).</p>
             <div className="code-box-8">
                 <pre>
@@ -353,7 +385,7 @@ export default function RegressionBlogArticle(){
                 </pre>
             </div>
             <img className='hist-residual-pic' src='https://www.sfu.ca/~mjbrydon/tutorials/BAinPy/_images/09_regression_18_0.png'/>
-            <h2 id='headLink6'>8.6. Q-Q plot</h2>
+            <h2 id='headLink6' ref={headingSIRef}>8.6. Q-Q plot</h2>
             <p>A Q-Q plot is a bit more specialized than a histogram or boxplot, so the easiest thing is to use the regression diagnostic plots provided by Statsmodels. How did I know Statsmodels has regression diagnostic plots? I Googled it. These plots are not as attractive as the Seaborn plots, but they are intended primarily for the data analyst. I think it is safe to assume that high-level decision makers will not be asking for Q-Q plots.</p>
             <div className="code-box-8">
                 <pre>
@@ -363,7 +395,7 @@ export default function RegressionBlogArticle(){
                 </pre>
             </div>
             <img className='hist-residual-pic' src='https://www.sfu.ca/~mjbrydon/tutorials/BAinPy/_images/09_regression_21_0.png'/>
-            <h2 id='headLink7'>8.7. Fitplot</h2>
+            <h2 id='headLink7' ref={headingSRef}>8.7. Fitplot</h2>
             <p>A fit plot shows predicted values of the response variable versus actual values of Y. If the linear regression model is perfect, the predicted values will exactly equal the observed values and all the data points in a predicted versus actual scatterplot will fall on the 45° diagonal.</p>
             <p>The fit plot provided by Statsmodels is okay in the sense that it gives a rough sense of the quality of the model. Since the <math xmlns="http://www.w3.org/1998/Math/MathML">
   <msup>
@@ -375,7 +407,7 @@ export default function RegressionBlogArticle(){
 </math>
             of this model is only 0.165, it should come as no surprise that the fit model is not particularly good.</p>
             <img className="hist-residual-pic" src="https://www.sfu.ca/~mjbrydon/tutorials/BAinPy/_images/09_regression_23_0.png"/>
-            <h2 id='headLink8'>8.8. Fit plot in seaborn</h2>
+            <h2 id='headLink8' ref={headingERef}>8.8. Fit plot in seaborn</h2>
             <p>As in R, creating a better fit plot is a bit more work. The central issue is that the observed and predicted axis must be identical for the reference line to be 45°. To achieve this, I do the following below:</p>
             <ol>
               <li>Determine the min and max values for the observed values of Y</li>

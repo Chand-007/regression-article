@@ -26,3 +26,8 @@ ol{
 .contents-container li a:hover{
     color:blue;
 }
+
+.bg-highlight{
+    color:white;
+    background-color: red;
+}
