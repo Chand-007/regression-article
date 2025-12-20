@@ -29,3 +29,9 @@ ol{
 .bg-highlight{
     color:rgb(183, 125, 241);
 }
+
+@media screen and (max-width:1000px){
+    .r-s-container{
+        display:none;
+    }
+}
