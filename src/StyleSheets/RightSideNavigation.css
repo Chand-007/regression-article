@@ -19,7 +19,6 @@ ol{
 
 .contents-container li a{
     text-decoration: none;
-    color:black;
 }
 
 
@@ -28,6 +27,5 @@ ol{
 }
 
 .bg-highlight{
-    color:white;
-    background-color: red;
+    color:rgb(183, 125, 241);
 }
